@@ -7,7 +7,7 @@ export function init() {
   // No need to `await` on this, mongoose 4 handles connection buffering internally
   mongoose.connect(envs.MONGODB, { useMongoClient: true });
   if (process.env.resetdb) {
-    await mongoose.connection.dropDatabase();
+    mongoose.connection.dropDatabase();
     winston.info('All data has been reset');
   }
 }

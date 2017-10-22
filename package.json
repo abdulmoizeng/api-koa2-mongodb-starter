@@ -65,7 +65,7 @@
     "mockery": "2.1.0",
     "nodemon": "1.12.1",
     "nyc": "11.2.1",
-    "raml2html": "6.4.1",
+    "raml2html": "3.0.1",
     "rimraf": "2.6.2",
     "sinon": "4.0.1",
     "supertest": "3.0.0"
