@@ -3,10 +3,5 @@
  */
 module.exports = {
   REQUEST_LOGS: false,
-  MYSQL: {
-    host: 'localhost',
-    user: 'root',
-    password: 'test',
-    database: 'ucc-v3-backend-test',
-  },
+  MONGODB: 'mongodb://localhost/koa-api-test-db',
 };

@@ -53,3 +53,21 @@ Build (or update) the API documentation to `api.html` in the root:
 ```sh
 yarn raml
 ```
+
+
+## Setup
+
+### Node.js (for local environment)
+
+Download the latest stable version and install it on your machine: https://nodejs.org/en/download/
+
+*Verify it after the installation by running following commands.*
+```
+$ node --version
+$ npm --version
+```
+
+### MongoDB (for local environment)
+
+Follow the instructions from this blog post: https://scotch.io/tutorials/an-introduction-to-mongodb
+

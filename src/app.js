@@ -10,6 +10,11 @@ import { rootRouter } from './routes/root.routes';
 import { healthCheckRouter } from './routes/health-check/health-check.routes';
 import { demoRouter } from './routes/demo/demo.routes';
 
+import { init } from './database/init';
+
+// connect to db
+init().catch(error => console.error(`database connection error: ${error}`));
+
 // Entry point for all modules.
 const api = koaRouter()
   .get('/', rootRouter.routes())

@@ -1,4 +1,4 @@
-import supertest from 'supertest-as-promised';
+import supertest from 'supertest';
 import { app } from '../app';
 
 const request = supertest.agent(app.listen());

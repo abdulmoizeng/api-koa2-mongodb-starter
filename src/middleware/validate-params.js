@@ -14,7 +14,7 @@ import R from 'ramda';
  * be performed.
  */
 export const validateParams
-  = (containerPath, params, validator) => async (ctx, next) => {
+  = (containerPath, params, validator) => async(ctx, next) => {
     const container = R.path(containerPath, ctx);
 
     if (!container) {
