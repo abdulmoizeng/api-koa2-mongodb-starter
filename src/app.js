@@ -1,9 +1,11 @@
 import Koa from 'koa';
+import cors from 'kcors';
 import koaRouter from 'koa-router';
 import bodyParser from 'koa-body';
 import koaConvert from 'koa-convert';
 import helmet from 'koa-helmet';
 import winston from 'winston';
+import project_env from './project-env';
 import { errorResponder } from './middleware/error-responder';
 import { REQUEST_LOGS } from './project-env';
 import { rootRouter } from './routes/root.routes';
@@ -33,9 +35,11 @@ app
   .use(helmet())
   .use(koaConvert(bodyParser()))
   .use(errorResponder)
+  .use(cors())
   .use(api.routes())
   .use(api.allowedMethods());
 
+winston.info(`Using app config: ${JSON.stringify(project_env)}`);
 const PORT = process.env.PORT || 3000;
 
 /* istanbul ignore if */
