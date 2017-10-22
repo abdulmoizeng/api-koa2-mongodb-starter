@@ -7,7 +7,6 @@ import helmet from 'koa-helmet';
 import winston from 'winston';
 import project_env from './project-env';
 import { errorResponder } from './middleware/error-responder';
-import { REQUEST_LOGS } from './project-env';
 import { rootRouter } from './routes/root.routes';
 import { healthCheckRouter } from './routes/health-check/health-check.routes';
 import { demoRouter } from './routes/demo/demo.routes';
@@ -27,7 +26,7 @@ const api = koaRouter()
 export const app = new Koa();
 
 /* istanbul ignore if */
-if (REQUEST_LOGS) {
+if (project_env && project_env.REQUEST_LOGS) {
   app.use(require('koa-morgan')('combined'));
 }
 

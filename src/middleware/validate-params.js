@@ -13,18 +13,32 @@ import R from 'ramda';
  * parameters in question. If this is omitted, a simple presence check will
  * be performed.
  */
-export const validateParams
-  = (containerPath, params, validator) => async(ctx, next) => {
-    const container = R.path(containerPath, ctx);
 
-    if (!container) {
-      winston.warn('Invalid param container:', container);
-      ctx.throw(400, 'Bad request');
-    }
+export const validateParams = (containerPath, params, validator) => async (ctx, next) => {
+  const container = R.path(containerPath, ctx);
 
-    R.forEach(assertValid(ctx, container, validator), params);
-    await next();
-  };
+  if (!container) {
+    winston.warn('Invalid param container:', container);
+    ctx.throw(400, 'Bad request');
+  }
+
+  R.forEach(assertValid(ctx, container, validator), params);
+  await next();
+};
+
+export const validateBulkParams = (containerPath, params) => async (ctx, next) => {
+  const container = R.path(containerPath, ctx);
+
+  if (!container) {
+    winston.warn('Invalid param container:', container);
+    ctx.throw(400, 'Bad request');
+  }
+  container.forEach((item) => {
+    R.forEach(assertValid(ctx, item), params);
+  });
+
+  await next();
+};
 
 const assertValid = (ctx, container, validator) => param => {
   if (!container[param]) {
