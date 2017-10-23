@@ -6,10 +6,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/narainsagar/api-koa-mongodb-starter.git"
+    "url": "https://github.com/narainsagar/api-koa2-mongodb-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/narainsagar/api-koa-mongodb-starter/issues"
+    "url": "https://github.com/narainsagar/api-koa2-mongodb-starter/issues"
   },
   "scripts": {
     "postinstall": "npm run build",
