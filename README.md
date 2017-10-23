@@ -1,4 +1,4 @@
-# KoaJS2-starter
+# Api-Koa2-MongoDB-Starter
 
 ## Quick Start
 
