@@ -71,3 +71,29 @@ $ npm --version
 
 Follow the instructions from this blog post: https://scotch.io/tutorials/an-introduction-to-mongodb
 
+
+## Contributing
+
+- Star this [GitHub Repository](https://github.com/narainsagar/api-koa2-mongodb-starter) ⭐
+- Fork this [GitHub Repository](https://github.com/narainsagar/api-koa2-mongodb-starter) 👈
+- Create [pull requests](https://github.com/narainsagar/api-koa2-mongodb-starter/pulls), [submit bugs](https://github.com/narainsagar/api-koa2-mongodb-starter/issues), suggest new features or documentation updates 🔧
+
+## About Me
+
+> My name is **Narain Sagar**, I’m a FullStack JavaScript Developer, lives in  Karachi, Pakistan and pretty much enjoying my life.
+
+![@narainsagar](https://avatars0.githubusercontent.com/narainsagar?&s=128)
+
+### Follow Me 👍
+
+[Medium](http://blog.narainsagar.com/) | 
+[Website](http://narainsagar.com/) | 
+[Twitter](https://twitter.com/narainsagar) | 
+[LinkedIn](https://www.linkedin.com/pk/narainsagar) | 
+[Facebook](https://facebook.com/NarainSagarPage) | 
+[Github](https://github.com/narainsagar) | 
+[Stack Overflow](https://stackoverflow.com/users/5228251/narainsagar)
+
+## License
+
+MIT - Narain Sagar <narainmenghwar@gmail.com>
